@@ -1,0 +1,14 @@
+	// creation 'un utilisateur
+CREATE USER 'vincent'@'localhost/%' IDENTIFIED BY '1234';
+
+	// donner les privileges utilisateur sur la db
+GRANT ALL PRIVILEGES ON shop.* TO 'vincent'@'localhost';
+
+	// appliquer les changements
+FLUSH PRIVILEGES;
+
+	// voir les privileges
+SHOW GRANTS FOR 'vincent'@'localhost';
+
+	// sortir
+EXIT;
